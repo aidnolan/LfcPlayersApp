@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+    <div class="container">
+    <div>New Player</div>
+    <form action="/players" method="POST">
+        <div>
+            <label>Title</label>
+            <input type="text" name="player[name]" placeholder="Type name">
+        </div>
+        <div>
+            <label>Image</label>
+            <input type="text" name="player[image]" placeholder="URL of player image">
+        </div>
+        <div>
+            <label>Career Goals Scored</label>
+            <input type="text" name="player[goals]" placeholder="No. of goals scored">
+        </div>
+        <div>
+            <label>Player Bio</label>
+            <textarea name="player[bio]"></textarea>
+        </div>
+        <input type="submit">
+    </form>
+</div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,40 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            LFC Legend App
+        </div>
+    </div>    
+    <div class="">
+        <div class="">
+            <% players.forEach(function(player){ %>
+                <div class="row box">
+                    <div class="col-xs-3">
+                        <img src="<%= player.image %>">    
+                    </div>
+                    <div class="col-xs-3">
+                        <a class="" href="/players/<%= player._id %>">
+                            <%= player.name %>
+                        </a>    
+                        <div class="">
+                            <p>
+                                <% if(player.bio.length > 100) { %>
+                                    <%- player.bio.substring(0, 100) + "..." %>
+                                <% } else { %>
+                                    <%- player.bio %>
+                                <% } %>
+                            </p>
+                        </div>
+                        <div class="">
+                            <a class="" href="/players/<%= player._id %>">
+                                Read More
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

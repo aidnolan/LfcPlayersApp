@@ -1,0 +1,9 @@
+img {
+    width: 100%;
+}
+
+.box {
+    margin: 20px 0;
+    padding: 5px 0;
+    border: 1px solid black;
+}

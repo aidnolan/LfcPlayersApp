@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+<div class="container">
+    <div>Edit <%= player.name %></div>
+    <form action="/players/<%= player._id %>?_method=PUT" method="POST">
+        <div>
+            <label>Title</label>
+            <input type="text" name="player[name]" value="<%= player.name %>">
+        </div>
+        <div>
+            <label>Image</label>
+            <input type="text" name="player[image]" value="<%= player.image %>">
+        </div>
+        <div>
+            <label>Career Goals Scored</label>
+            <input type="number" name="player[goals]" value="<%= player.goals %>">
+        </div>
+        <div>
+            <label>Player Bio</label>
+            <textarea name="player[bio]"><%= player.bio %></textarea>
+        </div>
+        <input type="submit">
+    </form>
+</div>
+
+
+<% include ./partials/footer %>

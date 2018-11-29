@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="">
+        <%= player.name %>
+    </div>
+    <div class="">
+        <div class="">
+            <img class="" src="<%= player.image %>">        
+        </div>
+        <div class="">
+            <p><%- player.bio %></p>
+        </div>
+        <a class="" href="/players/<%= player._id %>/edit">Edit</a>
+        <form id="delete" action="/players/<%= player._id %>?_method=DELETE" method="POST">
+            <button class="">Delete</button>
+        </form>
+    </div>
+</div>
+<% include ./partials/footer %>
