@@ -5,7 +5,7 @@ var express             = require("express"),
     mongoose            = require("mongoose"),
     expressSanitizer    = require("express-sanitizer");
     
-mongoose.connect("mongodb://localhost/liverpool_players_app");
+mongoose.connect("mongodb://aidan:test123@ds239055.mlab.com:39055/lfcplayersapp");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
