@@ -2,7 +2,7 @@
   "name": "liverpoolplayers",
   "version": "1.0.0",
   "description": "",
-  "engines" {
+  "engines": {
     "node": "8.15.0"
   },
   "main": "app.js",
