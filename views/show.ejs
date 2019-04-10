@@ -1,19 +1,25 @@
 <% include ./partials/header %>
-<div class="container">
-    <div class="">
-        <%= player.name %>
+<div class="container showBox">
+    <div class="row">
+        <h1 class="col-xs-12 col-md-9"><%= player.name %></h1>
     </div>
-    <div class="">
-        <div class="">
-            <img class="" src="<%= player.image %>">        
+    <div class="row">
+        <div class="col-xs-12 col-md-9">
+            <img class="col-xs-12" src="<%= player.image %>">        
         </div>
-        <div class="">
-            <p><%- player.bio %></p>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-9 bio">
+            <p id="inner-bio"><%- player.bio %></p>
         </div>
-        <a class="" href="/players/<%= player._id %>/edit">Edit</a>
-        <form id="delete" action="/players/<%= player._id %>?_method=DELETE" method="POST">
-            <button class="">Delete</button>
-        </form>
+    </div>
+    <div class="row" style="padding: 0 15px; text-align: center">
+        <div class="col-xs-12 col-md-9">
+            <a class="btn btn-primary" href="/players/<%= player._id %>/edit">Edit</a>
+            <form id="delete" action="/players/<%= player._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
+        </div>
     </div>
 </div>
 <% include ./partials/footer %>

@@ -1,9 +1,41 @@
-img {
-    width: 100%;
+form {
+	display: inline;
+}
+
+button {
+	display: inline;
+}
+
+h1 {
+	text-align: center;
 }
 
 .box {
+	padding: 20px;
     margin: 20px 0;
     padding: 5px 0;
     border: 1px solid black;
 }
+
+.instruction {
+	padding: 15px;
+}
+
+.innerBox {
+	padding-top: 10px;
+}
+
+.bio {
+	
+	padding: 0 15px;
+}
+
+#inner-bio {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.showBox {
+	margin-bottom: 20px;
+}
+
